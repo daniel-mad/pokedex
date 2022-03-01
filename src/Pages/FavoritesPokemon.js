@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 const FavoritesPokemon = () => {
-  const favorites = useSelector(state => state.favorites);
+  const favorites = useSelector(state => state.entities.favorites);
   const classes = useStyles();
   return (
     <Box className={classes.pokedexContainer}>

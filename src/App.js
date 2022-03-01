@@ -5,7 +5,7 @@ import AppNavigator from './components/AppNavigator';
 import FavoritesPokemon from './Pages/FavoritesPokemon';
 import Pokedex from './Pages/Pokedex';
 import PokemonDetails from './Pages/PokemonDetails';
-import { persistor, store } from './redux/store';
+import { persistor, store } from './store/configureStore';
 function App() {
   return (
     <Provider store={store}>

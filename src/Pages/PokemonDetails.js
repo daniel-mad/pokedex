@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { POKEMON_API_URL } from '../config';
-import { toggleFavorite } from '../redux/actions';
+import { toggleFavorite } from '../store/favorites';
 
 const useStyles = makeStyles(theme => ({
   pokedexContainer: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
 
 const PokemonDetails = () => {
   const dispatch = useDispatch();
-  const favorites = useSelector(state => state.favorites);
+  const favorites = useSelector(state => state.entities.favorites);
   const classes = useStyles();
   const [pokemon, setPokemon] = useState(null);
   const { id } = useParams();
